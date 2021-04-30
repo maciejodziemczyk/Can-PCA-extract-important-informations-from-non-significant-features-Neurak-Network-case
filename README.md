@@ -13,7 +13,7 @@ Data imputation algorithm description (brief):<br>
 You can find that idea [here](https://www.youtube.com/watch?v=nyxTdL_4Q-Q&t=494s&ab_channel=StatQuestwithJoshStarmer). The algorithm is based on Random Forest, steps:
 1. Attribute median is imputed
 2. Random Forest classifier is built
-3. Normalized proximity matrix is computed (distance measure based on RF node for particular observations)
+3. Normalized proximity matrix is computed (distance measure based on RF node for the particular observations)
 4. Dot product of proximity and current values is computed (weighted average)
 5. Repeat steps 2-5 several times or until convergence
 

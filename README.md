@@ -46,6 +46,12 @@ Findings:
  - Random Forest impurity based feature importance score gives the best results in terms of feature selection among considered ones: Mutual Information, Spearman correlation, General to Specyfic Logistic Regression LR test, L2 Logistic regression, but all of this methods are important and may be used successfully during analysis
  - If overfitting is not a problem, tree-based methods outperforms Neural Networks in current task. Extreme Gradient Boosting with gbtree or dart booster performance was the best, following by Random Forest (the easiest to implement)
 
+In this project I gained more experience with Machine Learning models, especially with keras library, I learnt a lot about feature selection methods too. I gained a lot experience with Python programming for data science too. I practices my problem solving skills. It was a big project, but now I know some issues:
+ 1. No EDA and advanced preprocessing (during analysis for my Thesis I found monotonic transformations very useful (especially Box-Cox and Yeo-Johnson), outliers reduction via quantile clipping (winsorization) is also extremely useful)
+ 2. Data normalization on the whole dataset (potential information leakage)
+
+Nevertheless I enjoyed this task and I like my solution, even with mentioned issues, I learnt a lot, and that is the key for me.
+
 ## Repository description
 
 

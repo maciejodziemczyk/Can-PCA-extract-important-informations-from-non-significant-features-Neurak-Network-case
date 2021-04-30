@@ -35,7 +35,7 @@ The next part was about PCA, firstly I inspected the whole training set to check
 
 After importance metrics analysis I tried different groupping rules and explained variance settings (expert analysis was the best, but simple RF_score < x was very close).
 
-Next I performed CV for my nets with develpoed PCA, you can see the results below (note naive network is network without PCA)
+Next I performed CV for my nets with developed PCA, you can see the results below (note naive network is network without PCA)
 
 ![validation ROCs and PRs](https://github.com/maciejodziemczyk/Can-PCA-extract-important-informations-from-non-significant-features-Neurak-Network-case/blob/main/ML2results.png)
 

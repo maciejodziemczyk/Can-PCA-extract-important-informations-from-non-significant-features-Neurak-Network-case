@@ -19,4 +19,14 @@ You can find that idea [here](https://www.youtube.com/watch?v=nyxTdL_4Q-Q&t=494s
 
 Next normalization (x-mu)/sigma was performed for future PCA and neural nets. Next k-Fold stratified Cross Validation experiments was performed for RF to find quasi-optimal hyperparameters (random search). 
 
-To perform PCA in more sophisticated way it was needed to spot non-significant features I used several methods: Random Forest feature importance score (thay's why I performed hyperparameter optimization before), Mutual Information, Spearman Rank Correlation (with target), Automatic General to Specyfic procedure based on logistic regression and Likelihood Ratio test (written from scratch), "Lasso" logistic regression betas vanishing while penalty increasing, Spearman Rank Correlation matrix.
+To perform PCA in more sophisticated way it was needed to spot non-significant features I used several methods: Random Forest feature importance score (thay's why I performed hyperparameter optimization before), Mutual Information, Spearman Rank Correlation (with target), Automatic General to Specyfic procedure based on logistic regression and Likelihood Ratio test (written from scratch), "Lasso" logistic regression betas vanishing while penalty increasing, Spearman Rank Correlation matrix (to find groups of correlated features). 
+
+I trained XGBoost (random search in CV) as a benchmark for nets.
+
+Because of data imbalance I decided to use AUC-PR and AUC-ROC as a metrics, tensorflow has different AUCs computation rules than scikit-learn, so I had to write my own training loop for nets. To find appropriate architecture and hyperparameters I performed some experiments on single train/valid split (computation power saving) on 50 epochs. I assumed some basic architecture based on my prior knowledge. My first step was to inspect optimization algorithm, I tried may of them with different learning rates, momentum or batch size. It turned out that RMSprop was the best one. After that I started experimets with activation functions and I found that tanh on first and sigmoid on second hidden layer works the best.
+
+Next I tried different regularization (L1 and L2) and dropout settings. Next step was to add third leyer, but it didn't help. The last step was to try different architectures (sets of hidden nodes combinations) and Batch Normalization testing.
+
+My final model was 2 hidden layers with 60 units each, tanh and sigmoid activations respectively, 0.4 dropouts on both layers, no regularization and batch norm, 350 batch size and RMSprop with default settings as optimizer.
+
+

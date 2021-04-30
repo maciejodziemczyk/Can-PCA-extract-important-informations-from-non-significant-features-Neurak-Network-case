@@ -35,8 +35,17 @@ The next part was about PCA, firstly I inspected the whole training sets to chec
 
 After importance metrics analysis I tried different groupping rules and explained variance settings (expert analysis was the best, by simple RF_score < x was very close).
 
-Next I performed CV for my nets with develpoed PCA
+Next I performed CV for my nets with develpoed PCA, you can see the results below (note naive network is network without PCA)
 
 ![validation ROCs and PRs](https://github.com/maciejodziemczyk/Can-PCA-extract-important-informations-from-non-significant-features-Neurak-Network-case/blob/main/ML2results.png)
+
+The last thing was to check statistical differences between naive and PCA models (wilcoxon median equality test for validation folds). It turned out that PCA statisticaly boosted 2-layer model performance in contrast to the 3-layer model. I tested if overfitting was lower when PCA applied (Null hypothesis accepted everytime => no statistical difference).
+
+Findings:
+ - PCA can extract important information from not imporant features in Neural Network case, but it is not a magic trick, the results are slighlty better. However PCA can be considered during predictive modelling of high dimensional data, especially when there are correlated features
+ - Random Forest impurity based feature importance score gives the best results in terms of feature selection among considered ones: Mutual Information, Spearman correlation, General to Specyfic Logistic Regression LR test, L2 Logistic regression, but all of this methods are important and may be used successfully during analysis
+ - If overfitting is not a problem, tree-based methods outperforms Neural Networks in current task. Extreme Gradient Boosting with gbtree or dart booster performance was the best, following by Random Forest (the easiest to implement)
+
+## Repository description
 
 

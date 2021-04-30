@@ -2,7 +2,7 @@
 Project created for *Machine Learning 2: predictive models, deep learning, neural network* classes at WNE UW
 
 Language:
- * English - classes, notebook, report, presentation
+ * English - classes, notebook, report, presentation, proposal
 
 Semester: III (MA studies)
 

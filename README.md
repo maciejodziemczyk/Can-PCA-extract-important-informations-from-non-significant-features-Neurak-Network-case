@@ -19,7 +19,7 @@ You can find that idea [here](https://www.youtube.com/watch?v=nyxTdL_4Q-Q&t=494s
 
 Next, normalization (x-mu)/sigma was performed for PCA and neural nets. Next, k-Fold stratified Cross Validation experiments was performed for RF to find quasi-optimal hyperparameters (random search). 
 
-To perform PCA in more sophisticated way it was needed to spot non-significant features I used several methods: Random Forest feature importance score (thay's why I performed hyperparameter optimization before), Mutual Information, Spearman Rank Correlation (with target), Automatic General to Specyfic procedure based on logistic regression and Likelihood Ratio test (written from scratch), "Lasso" logistic regression betas vanishing while penalty increasing, Spearman Rank Correlation matrix (to find groups of correlated features). 
+To perform PCA in more sophisticated way it was needed to spot non-significant features. I used several methods: Random Forest feature importance score (thay's why I performed hyperparameter optimization before), Mutual Information, Spearman Rank Correlation (with target), Automatic General to Specyfic procedure based on logistic regression and Likelihood Ratio test (written from scratch), "Lasso" logistic regression betas vanishing while penalty increasing, Spearman Rank Correlation matrix (to find groups of correlated features). 
 
 I trained XGBoost (random search in CV) as a benchmark for nets.
 

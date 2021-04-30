@@ -33,7 +33,7 @@ The next step was to perform n-Fold stratified Cross Validation and it turned ou
 
 The next part was about PCA, firstly I inspected the whole training set to check how varied the data was. After that I prepared special wrapper for NN training combined with PCA (it had to be performed in every split to prevent information leakage). My first run was the naive one - I applied PCA on the whole dataset to see what happen, and the results was slightly better than on the raw data. To perform more sophisticated PCA I analyzed my feature selection metrics and tried different groups to apply PCA on (for example I found featurex x,y,z non-significant and x,y correlated with each other so I named this as a one group and apply PCA to explain some fixed variance ratio). 
 
-After importance metrics analysis I tried different groupping rules and explained variance settings (expert analysis was the best, by simple RF_score < x was very close).
+After importance metrics analysis I tried different groupping rules and explained variance settings (expert analysis was the best, but simple RF_score < x was very close).
 
 Next I performed CV for my nets with develpoed PCA, you can see the results below (note naive network is network without PCA)
 

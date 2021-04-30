@@ -37,6 +37,6 @@ After importance metrics analysis I tried different groupping rules and explaine
 
 Next I performed CV for my nets with develpoed PCA
 
-
+![https://github.com/maciejodziemczyk/Can-PCA-extract-important-informations-from-non-significant-features-Neurak-Network-case/blob/main/ML2results.png]
 
 

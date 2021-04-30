@@ -42,11 +42,11 @@ Next I performed CV for my nets with developed PCA, you can see the results belo
 The last thing was to check statistical differences between naive and PCA models (wilcoxon median equality test for validation folds). It turned out that PCA statisticaly boosted 2-layer model performance in contrast to the 3-layer model. I tested if overfitting was lower when PCA applied (Null hypothesis accepted everytime => no statistical differences).
 
 Findings:
- - PCA can extract important information from not imporant features in Neural Network case, but it is not a magic trick, the results are slighlty better. However PCA can be considered during predictive modelling of high dimensional data, especially when there are correlated features
- - Random Forest impurity based feature importance score gives the best results in terms of feature selection among considered ones: Mutual Information, Spearman correlation, General to Specyfic Logistic Regression LR test, L2 Logistic regression, but all of this methods are important and may be used successfully during analysis
+ - PCA can extract important information from not imporant features in Neural Network case, but it is not a magic trick, the results were slighlty better. However PCA can be considered during predictive modelling of high dimensional data, especially when there are correlated features
+ - Random Forest impurity based feature importance score gave the best results in terms of feature selection among considered ones: Mutual Information, Spearman correlation, General to Specyfic Logistic Regression LR test, L2 Logistic regression, but all of this methods are important and may be used successfully during analysis
  - If overfitting is not a problem, tree-based methods outperforms Neural Networks in current task. Extreme Gradient Boosting with gbtree or dart booster performance was the best, following by Random Forest (the easiest to implement)
 
-In this project I gained more experience with Machine Learning models, especially with keras library, I learnt a lot about feature selection methods too. I gained a lot experience with Python programming for data science too. I practices my problem solving skills. It was a big project, but now I know some issues:
+In this project I gained more experience with Machine Learning models, especially with keras library, I learnt a lot about feature selection methods too. I gained a lot experience with Python programming for data science. I practiced my problem solving skills. It was a big project, but now I know some issues:
  1. No EDA and advanced preprocessing (during analysis for my Thesis I found monotonic transformations very useful (especially Box-Cox and Yeo-Johnson), outliers reduction via quantile clipping (winsorization) is also extremely useful)
  2. Data normalization on the whole dataset (potential information leakage)
 

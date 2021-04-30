@@ -39,7 +39,7 @@ Next I performed CV for my nets with developed PCA, you can see the results belo
 
 ![validation ROCs and PRs](https://github.com/maciejodziemczyk/Can-PCA-extract-important-informations-from-non-significant-features-Neurak-Network-case/blob/main/ML2results.png)
 
-The last thing was to check statistical differences between naive and PCA models (wilcoxon median equality test for validation folds). It turned out that PCA statisticaly boosted 2-layer model performance in contrast to the 3-layer model. I tested if overfitting was lower when PCA applied (Null hypothesis accepted everytime => no statistical difference).
+The last thing was to check statistical differences between naive and PCA models (wilcoxon median equality test for validation folds). It turned out that PCA statisticaly boosted 2-layer model performance in contrast to the 3-layer model. I tested if overfitting was lower when PCA applied (Null hypothesis accepted everytime => no statistical differences).
 
 Findings:
  - PCA can extract important information from not imporant features in Neural Network case, but it is not a magic trick, the results are slighlty better. However PCA can be considered during predictive modelling of high dimensional data, especially when there are correlated features

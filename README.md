@@ -14,7 +14,7 @@ You can find that idea [here](https://www.youtube.com/watch?v=nyxTdL_4Q-Q&t=494s
 1. Attribute median is imputed
 2. Random Forest classifier is built
 3. Normalized proximity matrix is computed (distance measure based on RF node for the particular observations)
-4. Dot product of proximity and current values is computed (weighted average)
+4. Dot product of proximity and current X matrix is computed (weighted average)
 5. Repeat steps 2-5 several times or until convergence
 
 Next normalization (x-mu)/sigma was performed for future PCA and neural nets. Next k-Fold stratified Cross Validation experiments was performed for RF to find quasi-optimal hyperparameters (random search). 

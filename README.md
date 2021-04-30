@@ -17,7 +17,7 @@ You can find that idea [here](https://www.youtube.com/watch?v=nyxTdL_4Q-Q&t=494s
 4. Dot product of proximity and current X matrix is computed (weighted average)
 5. Repeat steps 2-5 several times or until convergence
 
-Next, normalization (x-mu)/sigma was performed for future PCA and neural nets. Next k-Fold stratified Cross Validation experiments was performed for RF to find quasi-optimal hyperparameters (random search). 
+Next, normalization (x-mu)/sigma was performed for PCA and neural nets. Next k-Fold stratified Cross Validation experiments was performed for RF to find quasi-optimal hyperparameters (random search). 
 
 To perform PCA in more sophisticated way it was needed to spot non-significant features I used several methods: Random Forest feature importance score (thay's why I performed hyperparameter optimization before), Mutual Information, Spearman Rank Correlation (with target), Automatic General to Specyfic procedure based on logistic regression and Likelihood Ratio test (written from scratch), "Lasso" logistic regression betas vanishing while penalty increasing, Spearman Rank Correlation matrix (to find groups of correlated features). 
 

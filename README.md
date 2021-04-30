@@ -25,7 +25,7 @@ I trained XGBoost (random search in CV) as a benchmark for nets.
 
 Due to data imbalance I decided to use AUC-PR and AUC-ROC as a metrics, tensorflow has different AUCs computation rules than scikit-learn, so I had to write my own training loop for nets (with early stopping on PR). To find appropriate architecture and hyperparameters I performed some experiments on single train/valid split (computation power saving) on 50 epochs. I assumed some basic architecture based on my prior knowledge. My first step was to inspect optimization algorithms, I tried many of them with different learning rates, momentum or batch size. It turned out that RMSprop was the best one. After that I started experimets with activation functions and I found that tanh on the first and on the sigmoid on second hidden layer worked the best.
 
-Next, I tried different regularization (L1 and L2) and dropout settings. Next step was to add third leyer, but it didn't help. The last step was to try different architectures (sets of hidden nodes combinations) and Batch Normalization testing.
+Next, I tried different regularization (L1 and L2) and dropout settings. Next step was to add third layer, but it didn't help. The last step was to try different architectures (sets of hidden nodes combinations) and Batch Normalization testing.
 
 My final model was 2 hidden layers with 60 units each, tanh and sigmoid activations respectively, 0.4 dropouts on both layers, no regularization and batch norm, 350 batch size and RMSprop with default settings as optimizer.
 

@@ -53,5 +53,21 @@ In this project I gained more experience with Machine Learning models, especiall
 Nevertheless I enjoyed this task and I like my solution, even with mentioned issues, I learnt a lot, and that is the key for me.
 
 ## Repository description
+ - Can PCA extract important informations from non-significant features- Neural Network case..ipynb - Jupyter Notebook with my analysis (we had to defense our projects)
+ - LassoResults.csv - results of lasso logistic regression feature selection
+ - ML2_Maciej_Odziemczyk_project_presentation.pdf - project presentation (we had to present the project to the group)
+ - ML2_Maciej_Odziemczyk_project_report.pdf - project report (part of assignment)
+ - ML2_Project_proposal_M_Odziemczyk.pdf - project proposal (our ideas had to be accepted by teacher)
+ - ML2results.png - graphs for github readme :)
+ - XX_Random_Search.csv - random search results for particular algorithm
+ - xx_.p - pickled results for models
+
+## Technologies
+ - Python (pandas, numpy, scipy, matplotlib.pyplot, scikit-learn, statsmodels, keras, xgboost)
+ - Jupyter Notebook
+ - LaTeX (report, presentation, proposal)
+
+## Author
+ - Maciej Odziemczyk
 
 
